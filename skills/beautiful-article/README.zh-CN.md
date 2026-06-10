@@ -8,6 +8,26 @@
 
 ---
 
+### 由 [ReActicle](https://github.com/ConardLi/reacticle) 驱动
+
+`beautiful-article` 是编辑型 **harness**（方法论、checkpoint、主题选型、sub-agent reviewer）；[`reacticle`](https://github.com/ConardLi/reacticle) 是 Skill 在运行时调用的**底层组件协议** —— prose-first 的 React 语义组件 + 基于主题 token 的 `Raw` 自由层，统一接到同一套主题系统上。
+
+```
+beautiful-article  （本 Skill · 方法论 + harness）
+        │  调用
+        ▼
+reacticle          （npm 包 · 组件 / 主题 / Raw / 导出）
+```
+
+| 层级 | 负责什么 | 仓库 / 文档 |
+|---|---|---|
+| `beautiful-article`（本 Skill） | **怎么** 让 Agent 从任意素材出发，规划、撰写、审阅、交付一篇文章 —— 6 阶段流程、3 个硬 checkpoint、主题选型、sub-agent reviewer | 当前目录 |
+| `reacticle` | Skill 实际拼装出的组件词表 + 11 套 authoring 主题 —— `Article` / `Hero` / `Lead` / `Section` / `Quote` / `Image` / `Formula` / `CodeBlock` / `Raw` …，每套主题 = 一份 `.css` token 包 + 一份 `.md` authoring profile | [`ConardLi/reacticle`](https://github.com/ConardLi/reacticle) · [npm `reacticle`](https://www.npmjs.com/package/reacticle) · [文档站](https://rearticle.mmh1.top/) |
+
+二者搭配最佳但相互独立：Skill 因为有 ReActicle 这个稳定目标层才能跑通；ReActicle 单独作为 React 组件库使用也完全立得住。
+
+---
+
 ### [文章实例](https://mmh1.top/#/ai-article) —— 用 `beautiful-article` + ReActicle 写出来的真实文章
 
 每一篇都是 AI Agent 用本 Skill 调用 [`reacticle`](https://www.npmjs.com/package/reacticle) 组件协议端到端写完的真实长文。点封面即可在线打开单文件 HTML 版本。

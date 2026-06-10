@@ -240,7 +240,7 @@
 亮点：
 
 - **首先是一篇文章** —— 注意力永远在"文章"本身：更好的阅读、更好的节奏、更好的美学。交付物是一份自包含的文件（HTML，可选 PDF），但那是交付细节、不是目标
-- **Reacticle 组件协议** —— prose-first 的语义组件（Hero / Lead / Section / Quote / Callout / Image / Formula / CodeBlock / Table…）+ 仅允许主题 token 的 `Raw` 自由层
+- **Reacticle 组件协议** —— prose-first 的语义组件（Hero / Lead / Section / Quote / Callout / Image / Formula / CodeBlock / Table…）+ 仅允许主题 token 的 `Raw` 自由层；底层 React 组件库见 [`ConardLi/reacticle`](https://github.com/ConardLi/reacticle)
 - **10 种文章类型 + 推荐保留比例打包** —— `longform · ~100%` / `tutorial · ~90%` / `full-report · ~80%` / `explainer · ~80%` / `dialogue · ~80%` / `review · ~70%` / `essay · ~70%` / `briefing · ~50%` / `visual-essay · ~40%` / `interactive-explainer · ~25% 摘录 + 75% AI 重构`
 - **11 套主题 authoring profile**（`tufte`、`press`、`bayer`、`bodoni`、`vignelli`、`sottsass`、`freddie`、`andy`、`fuller`、`knuth`、`shannon`）—— 每套是给 Agent 看的 Markdown 契约，不是 CSS 文件
 - **硬协作 checkpoint**，每项决策独立确认（禁止静默替用户选择），自带 3:4 书封封面、TOC 默认开、目标语言地道翻译

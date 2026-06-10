@@ -8,6 +8,26 @@
 
 ---
 
+### Powered by [ReActicle](https://github.com/ConardLi/reacticle)
+
+`beautiful-article` is the editorial **harness** (methodology, checkpoints, theme picker, sub-agent reviewers); [`reacticle`](https://github.com/ConardLi/reacticle) is the underlying **runtime component protocol** the skill writes against — prose-first React components plus a token-based `Raw` escape hatch, all wired into the same theme system.
+
+```
+beautiful-article  (this skill · methodology + harness)
+        │  composes
+        ▼
+reacticle          (npm package · components / themes / Raw / export)
+```
+
+| Layer | What it owns | Where it lives |
+|---|---|---|
+| `beautiful-article` (this skill) | **How** the agent plans, writes, reviews and delivers an article from any source — six numbered phases, three hard checkpoints, theme picker, sub-agent reviewers | This directory |
+| `reacticle` | The component vocabulary + 11 authoring themes the skill compiles into — `Article` / `Hero` / `Lead` / `Section` / `Quote` / `Image` / `Formula` / `CodeBlock` / `Raw` …, each theme a `.css` token bundle + `.md` authoring profile | [`ConardLi/reacticle`](https://github.com/ConardLi/reacticle) · [npm `reacticle`](https://www.npmjs.com/package/reacticle) · [docs](https://rearticle.mmh1.top/) |
+
+The two pair very well but are independently useful: the skill works because it has ReActicle to target, and ReActicle is a perfectly usable React library on its own.
+
+---
+
 ### [Showcase](https://mmh1.top/#/ai-article) — articles built with `beautiful-article` + ReActicle
 
 Real long-form articles, each authored end-to-end by an AI agent running this skill against the [`reacticle`](https://www.npmjs.com/package/reacticle) component protocol. Click any cover to open the live, single-file HTML article.
